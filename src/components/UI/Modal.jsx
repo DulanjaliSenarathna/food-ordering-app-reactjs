@@ -7,8 +7,9 @@ export default function Modal({ children, open , className=''}) {
 
     useEffect(() => {
         if (open) {
-            dialog.showModal();
+            dialog.current.showModal();
         }
+        return ()=> dialog.current.close();
     }, [open]);
     return createPortal(<dialog ref={dialog} className={`modal ${className}`}>
         {children}
