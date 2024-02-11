@@ -7,7 +7,7 @@ const CartContext = createContext({
 });
 
 function cartReducer(state,action){
-    if(action.type == 'ADD_ITEM'){
+    if(action.type === 'ADD_ITEM'){
         const exsistingCartItemIndex = state.items.findIndex(
             (item)=> item.id === action.item.id
         );
@@ -15,7 +15,7 @@ function cartReducer(state,action){
         const updatedItems = [...state.items];
 
         if(exsistingCartItemIndex >-1){
-            const existingItem = state.items[exsistingCartItemIndex]
+            const existingItem = state.items[exsistingCartItemIndex];
             const updatedItem = {...existingItem,
             quantity: existingItem.quantity+1
             }
@@ -26,14 +26,14 @@ function cartReducer(state,action){
 
         return {...state, items:updatedItems};
     }
-    if(action.type == 'REMOVE_ITEM'){
+    if(action.type === 'REMOVE_ITEM'){
         const exsistingCartItemIndex = state.items.findIndex(
-            (item)=> item.id === action.item.id
+            (item)=> item.id === action.id
         );
 
         const existingCartItem = state.items[exsistingCartItemIndex];
         const updatedItems = [...state.items];
-        if(existingCartItem.quantity ===1){
+        if(existingCartItem.quantity === 1){
             
             updatedItems.splice(exsistingCartItemIndex,1);
         }else{
@@ -54,14 +54,22 @@ function cartReducer(state,action){
 export function CartContextProvider({children}){
    const [cart,dispatchCartAction]= useReducer(cartReducer,{items:[]});
 
-   
-
    function addItem(item){
-    dispatchCartAction({type: 'ADD_ITEM',item})
+    try {
+        dispatchCartAction({type: 'ADD_ITEM',item}) 
+    } catch (error) {
+        console.log(error);
+    }
+    
    }
 
    function removeItem(id){
-    dispatchCartAction({type: 'REMOVE_ITEM',id})
+    try {
+        dispatchCartAction({type: 'REMOVE_ITEM',id})
+    } catch (error) {
+        console.log(error);
+    }
+   
    }
 
    const cartContext = {
