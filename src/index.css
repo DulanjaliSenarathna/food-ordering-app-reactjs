@@ -60,6 +60,23 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   gap: 1rem;
 }
+.error {
+  width: 90%;
+  max-width: 25rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #f9b8b8;
+  color: #6d0b0b;
+  border-radius: 6px;
+}
+
+.error h2 {
+  margin: 0;
+}
+
+.error p {
+  margin: 0;
+}
 
 .meal-item {
   background-color: #1d1a16;
