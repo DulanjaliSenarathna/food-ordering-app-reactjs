@@ -73,4 +73,12 @@ Happy Coding! 🚀
 
 # Website's screenshots
 
+![1](https://github.com/DulanjaliSenarathna/food-ordering-app-reactjs/assets/59603716/c64f8e2f-1a4f-47db-a6fc-5aab9da2c896)
 
+![2](https://github.com/DulanjaliSenarathna/food-ordering-app-reactjs/assets/59603716/64683f94-01fb-436d-9ab0-d832a7cfa675)
+
+![3](https://github.com/DulanjaliSenarathna/food-ordering-app-reactjs/assets/59603716/e6b9a89f-7cbc-4148-b46a-fb6ef7472cb3)
+
+![4](https://github.com/DulanjaliSenarathna/food-ordering-app-reactjs/assets/59603716/a664f5ce-6141-40dc-983f-e35161d8ccea)
+
+![5](https://github.com/DulanjaliSenarathna/food-ordering-app-reactjs/assets/59603716/bf64758d-72cb-4642-b91e-fa7d3bf36cad)
